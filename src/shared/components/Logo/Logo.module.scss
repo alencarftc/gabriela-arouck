@@ -1,0 +1,6 @@
+@import "src/assets/scss/root";
+
+.logo {
+  font-size: 120px;
+  @include linear-gradient(#6d7fff, #b4d7fd, $text: true);
+}
