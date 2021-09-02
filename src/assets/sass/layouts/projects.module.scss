@@ -1,0 +1,42 @@
+@use "@sass/abstracts/mixins" as mix;
+
+.row {
+  display: flex;
+}
+
+.projects {
+  text-align: center;
+}
+
+@include mix.mq("sm", min) {
+  .projects {
+    text-align: left;
+  }
+}
+
+.item {
+  margin: 40px 0 48px;
+
+  @include mix.mq("sm", min) {
+    &:nth-child(even) article {
+      flex-direction: row-reverse;
+
+      div:last-child {
+        // max-width: 595px;
+        // @include mix.to-flex;
+
+        img {
+          // max-width: 172px;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+          padding-right: 0;
+
+          &:nth-child(1) {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "@sass/themes/default" as default;
+@use "@sass/abstracts/mixins" as mix;
+
+.cta {
+  padding: calc(5.5% + 15px) 0 48.5px;
+
+  @include mix.mq("sm", max) {
+    text-align: center;
+
+    div {
+      flex-direction: column-reverse;
+    }
+
+    button {
+      margin-top: 35px;
+    }
+  }
+
+  h1 {
+    color: default.$secondary-color;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .info {
+    max-width: 610px;
+  }
+}

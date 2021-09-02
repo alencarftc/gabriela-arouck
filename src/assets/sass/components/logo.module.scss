@@ -1,0 +1,9 @@
+@use "@sass/abstracts/mixins" as mix;
+
+.logo {
+  font-size: 24rem;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0;
+  @include mix.linear-gradient(#6d7fff, #b4d7fd, $text: true);
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["shared/components/*"],
+      "@configs/*": ["shared/configs/*"],
+      "@layouts/*": ["shared/layouts/*"],
+      "@utils/*": ["shared/utils/*"],
+      "@pages/*": ["pages/*"],
+      "@images/*": ["assets/images/*"],
+      "@sass/*": ["assets/sass/*"],
+      "@files/*": ["assets/files/*"]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": ["node_modules", "build", "coverage", "dist", "lib"]
+}

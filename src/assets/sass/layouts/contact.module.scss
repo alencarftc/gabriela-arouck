@@ -1,0 +1,48 @@
+@use "@sass/themes/default" as default;
+@use "@sass/abstracts/mixins" as mix;
+
+@include mix.mq("sm", max) {
+  .contact {
+    h2 {
+      font-size: 22rem;
+    }
+
+    h4 {
+      font-size: 20rem;
+    }
+
+    li img {
+      max-width: 30px;
+    }
+  }
+}
+
+.contact {
+  padding: calc(5% + 35px) 0 90px;
+  text-align: center;
+
+  h2 {
+    color: #57a6d6;
+    margin: 32px auto;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  img {
+    max-width: 40px;
+    width: 100%;
+    height: auto;
+    margin: 16px 20px 0;
+  }
+
+  ul {
+    justify-content: center;
+  }
+}
+
+.info {
+  margin-bottom: 110px;
+}

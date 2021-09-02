@@ -1,24 +1,32 @@
-import Logo from './shared/components/Logo/Logo'
+import { BrowserRouter, Switch, Route, Router } from 'react-router-dom';
+import "@sass/main.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import style from "./App.scss";
+import Header from "@layouts/Header";
+import HomePage from "@pages/HomePage";
+import GaguezProjectPage from "@pages/projects/GaguezProjectPage";
+import ReszonProjectPage from "@pages/projects/ReszonProjectPage";
+
+const App = () => (
+  <div className={style.app}>
+    <Header />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/">
+          <HomePage />
+        </Route>
+        <Route path="/projetos/gaguez">
+          <GaguezProjectPage />
+        </Route>
+        <Route path="/projetos/reszon">
+          <ReszonProjectPage />
+        </Route>
+        <Route path="*">
+          <p>Página não encontrada :(</p>
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
