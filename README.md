@@ -1,7 +1,5 @@
 # Gabriela Arouck's website
 
-![Gabriela Arouck](https://user-images.githubusercontent.com/2683512/78789364-545e7100-79ad-11ea-9e3c-9528c99cda8e.png)
-
 **Gabriela Arouck's website** is a website developed by me and designed by Gabriela Arouck for showing her professional profile and sharing her projects, services, and more.
 
 Use it for personal projects only and be sure to reach me out on [Twitter](https://twitter.com/alencarftc) if you build anything cool/useful with it.

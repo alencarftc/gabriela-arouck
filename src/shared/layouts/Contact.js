@@ -25,17 +25,17 @@ const Contact = () => {
           <h4>CONTATO</h4>
           <ul className="row">
             <li>
-              <a href={URLs.linkedin}>
+              <a target="blank" href={URLs.linkedin}>
                 <img src={LinkedInIcon} alt="LinkedIn" />
               </a>
             </li>
             <li>
-              <a href={URLs.dribble}>
+              <a target="blank" href={URLs.dribble}>
                 <img src={DribbleIcon} alt="Dribble" />
               </a>
             </li>
             <li>
-              <a href={URLs.behance}>
+              <a target="blank" href={URLs.behance}>
                 <img src={BehanceIcon} alt="Behance" />
               </a>
             </li>

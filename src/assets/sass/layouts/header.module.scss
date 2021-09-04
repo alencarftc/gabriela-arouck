@@ -4,28 +4,41 @@
   background: #ffffff;
   box-shadow: 0 5px 20px #c0e5fc58;
   width: 100%;
-  position: sticky;
-  top: calc(-100% + 88px);
+  position: fixed;
+  top: 0;
   z-index: 1;
-  transition: top 0.2s ease-in-out;
+  transition: top 200ms ease;
 
-  div {
+  & > div {
     @include mix.to-flex($justify: space-between, $align: center);
-    height: 88px;
+    min-height: 88px;
+    width: 100%;
+
+    div {
+      width: inherit;
+    }
   }
 
   ul {
-    @include mix.to-flex();
+    padding: 20px 0;
+    align-items: center;
+    text-align: center;
+    height: 100%;
 
     li {
       font-size: 16rem;
-      margin-right: 32px;
       color: #687aff;
       text-transform: uppercase;
       font-weight: 500;
+      width: 100%;
 
       &:hover {
         color: #72b7e2;
+      }
+
+      @include mix.mq("sm", max){
+        color: #030164;
+        padding: 11px 16px 12px;
       }
     }
   }

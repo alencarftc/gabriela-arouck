@@ -2,7 +2,7 @@
 @use "@sass/abstracts/mixins" as mix;
 
 .cta {
-  padding: calc(5.5% + 15px) 0 48.5px;
+  padding: calc(5.5% + 103px) 0 48.5px;
 
   @include mix.mq("sm", max) {
     text-align: center;

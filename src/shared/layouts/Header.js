@@ -1,42 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Logo from '@components/Logo';
 import style from '@sass/layouts/header.module.scss';
+import useDocumentScrollThrottled from '@utils/hooks/useDocumentScrollThrottled';
 
 const Header = () => {
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
+  const [shouldHideHeader, setShouldHideHeader] = useState(false);
+  const MINIMUM_SCROLL = 88;
+  const TIMEOUT_DELAY = 150;
 
-  const handleScroll=() => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
-      setScrolled(false);
-      return;
-    }
+  useDocumentScrollThrottled(callbackData => {
+    const { previousScrollTop, currentScrollTop } = callbackData;
+    const isScrolledDown = previousScrollTop < currentScrollTop;
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
-    const scrollOffset = lastScrollY - currentScroll  //header height
-    console.log(scrollOffset)
-    if (currentScroll > lastScrollY && scrollOffset > 88 && !scrolled) {
-      setScrolled(true);
-    } else if (currentScroll < lastScrollY && scrolled) {
-      setScrolled(false);
-    }
-
-    setLastScrollY(currentScroll);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
+    console.log(callbackData)
+    setTimeout(() => {
+      setShouldHideHeader(isScrolledDown && isMinimumScrolled && currentScrollTop > 150);
+    }, TIMEOUT_DELAY);
+  });
 
   return (
-    <header className={`${style.header} ${scrolled ? 'navUp' : ''}`}>
+    <header className={`${style.header} ${shouldHideHeader ? 'navDown' : 'navUp'}`}>
       <div className="container">
-        <Logo />
-        <ul>
-          <li><a href="#projects-section">Projetos</a></li>
-          <li><a href="#about-section">Sobre</a></li>
-          <li><a href="#contact-section">Contato</a></li>
-        </ul>
+        <div className="row">
+          <div className="col-10 col-md-5">
+            <Logo />
+          </div>
+          <div className="col-2 d-md-none">
+            x
+          </div>
+          <div className="col-12 col-md-7 items-row">
+            <ul className="row">
+              <div className=""></div>
+              <li className="col-12 offset-6 col-md-2"><a href="#projects-section">Projetos</a></li>
+              <li className="col-12 col-md-2"><a href="#about-section">Sobre</a></li>
+              <li className="col-12 col-md-2"><a href="#contact-section">Contato</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
   );

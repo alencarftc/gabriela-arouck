@@ -16,18 +16,20 @@ const Project = ({
   children = <></>
 }) => {
   return (
-    <a className={`${style.project} ${style[theme]} container`} href={uri}>
+    <div className={`${style.project} ${style[theme]} container`}>
       <article className="row">
         <img className={style.mobileImage} src={mobileImage} alt={title} />
         <div className={`${style.info} col-12 col-md-6`}>
           <h2>{title}</h2>
           <h4>{subtitle}</h4>
           <p>{description}</p>
-          <Button size="auto" primary={false}>Ver Projeto</Button>
+          <a  href={uri}>
+            <Button size="auto" primary={false}>Ver Projeto</Button>
+          </a>
         </div>
         <div className={`${style.images} col-12 col-md-6`}>{children}</div>
       </article>
-    </a>
+    </div>
   )
 }
 

@@ -51,7 +51,7 @@ const Skills = () => {
         </div>
         <div className="row">
           {skills.map(skill => (
-            <div className="col-12 col-sm-6 col-md-4">
+            <div key={skill.title} className="col-12 col-sm-6 col-md-4">
               <div className={style.item}>
                 <img src={skill.icon} alt={skill.title} />
                 <h5>{skill.title}</h5>
