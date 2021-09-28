@@ -1,7 +1,14 @@
 import React from 'react'
 import style from '@sass/components/project.module.scss';
 import Button from './Button';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 export const THEMES = {
   theme1: 'blue',
   theme2: 'green'
@@ -10,7 +17,7 @@ const Project = ({
   title = '',
   subtitle = '',
   description = '',
-  uri = '',
+  path = '',
   theme = THEMES.theme1,
   mobileImage = '',
   children = <></>
@@ -23,9 +30,9 @@ const Project = ({
           <h2>{title}</h2>
           <h4>{subtitle}</h4>
           <p>{description}</p>
-          <a  href={uri}>
+          <Link to={path}>
             <Button size="auto" primary={false}>Ver Projeto</Button>
-          </a>
+          </Link>
         </div>
         <div className={`${style.images} col-12 col-md-6`}>{children}</div>
       </article>

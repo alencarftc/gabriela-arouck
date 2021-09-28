@@ -1,9 +1,11 @@
 import React from 'react'
+import Contact from '@layouts/Contact';
 
-const GaguezProjectPage = ({ id }) => {
+const GaguezProjectPage = () => {
   return (
     <div>
-      {id}
+      <h1>Em breve... :)</h1>
+      <Contact />
     </div>
   )
 }

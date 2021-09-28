@@ -2,17 +2,23 @@
 @use "@sass/themes/default" as default;
 
 .button {
+  position: relative;
+  display: inline-block;
   background: darken(#37539e, 1.5);
   color: #ffffff;
   border: none;
   border-radius: 26px;
   cursor: pointer;
+  transition: all 150ms ease-in-out;
 }
 
 .button-primary {
-  @include mix.linear-gradient(#fea05f, #fad590);
   color: default.$primary-color;
-  transition: background 300ms ease-out;
+  display: inline-block;
+  position: relative;
+  min-width: 215px;
+  height: 54px;
+  @include mix.linear-gradient(#fea05f, #fad590);
 
   &:hover {
     @include mix.linear-gradient(#fea05f, #c68916);

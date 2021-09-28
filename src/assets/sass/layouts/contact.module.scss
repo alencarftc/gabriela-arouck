@@ -45,4 +45,8 @@
 
 .info {
   margin-bottom: 110px;
+
+  @include mix.mq("xs", max){
+    margin-bottom: 55px;
+  }
 }

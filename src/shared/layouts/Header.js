@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import Logo from '@components/Logo';
 import style from '@sass/layouts/header.module.scss';
 import useDocumentScrollThrottled from '@utils/hooks/useDocumentScrollThrottled';
+import { HashLink as Link } from 'react-router-hash-link';
+import ClearIcon from '@components/ClearIcon';
+import HamburgerIcon from '@components/HamburgerIcon';
 
 const Header = () => {
+  const isMobile = window.innerWidth < 768;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const MINIMUM_SCROLL = 88;
   const TIMEOUT_DELAY = 150;
@@ -13,30 +18,39 @@ const Header = () => {
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
-    console.log(callbackData)
     setTimeout(() => {
-      setShouldHideHeader(isScrolledDown && isMinimumScrolled && currentScrollTop > 150);
+      const tempShouldHideHeader = isScrolledDown && isMinimumScrolled && currentScrollTop > 150
+      setShouldHideHeader(tempShouldHideHeader);
+
+      if( tempShouldHideHeader ){
+        setIsMenuOpen(false)
+      }
     }, TIMEOUT_DELAY);
   });
 
   return (
     <header className={`${style.header} ${shouldHideHeader ? 'navDown' : 'navUp'}`}>
       <div className="container">
-        <div className="row">
-          <div className="col-10 col-md-5">
+        <div className={`row ${style.row}`}>
+          <div className="col-10 col-md-4">
             <Logo />
           </div>
-          <div className="col-2 d-md-none">
-            x
+          <div className={`${style.iconCol} col-2 d-md-none`}>
+            {!isMenuOpen ? (
+              <HamburgerIcon onClick={(e) => setIsMenuOpen(true)} />
+            ) : (
+              <ClearIcon onClick={(e) => setIsMenuOpen(false)} />
+            )}
           </div>
-          <div className="col-12 col-md-7 items-row">
-            <ul className="row">
-              <div className=""></div>
-              <li className="col-12 offset-6 col-md-2"><a href="#projects-section">Projetos</a></li>
-              <li className="col-12 col-md-2"><a href="#about-section">Sobre</a></li>
-              <li className="col-12 col-md-2"><a href="#contact-section">Contato</a></li>
-            </ul>
-          </div>
+            {(!isMobile || (isMobile && isMenuOpen)) && (
+            <div className={`col-12 col-md-8`}>
+                <ul className="row">
+                  <li className="col-12 offset-xl-6 offset-md-3 col-md-3 col-xl-2"><Link to="/#projects-section">Projetos</Link></li>
+                  <li className="col-12 col-md-3 col-xl-2"><Link to="/#about-section">Sobre</Link></li>
+                  <li className="col-12 col-md-3 col-xl-2"><Link to="/#contact-section">Contato</Link></li>
+                </ul>
+            </div>
+            )}
         </div>
       </div>
     </header>

@@ -1,0 +1,20 @@
+.root {
+    display: inline-block;
+    height: 4px;
+    width: 25px;
+    border-radius: 5px;
+    background: #5F80D6;
+    margin: 0 0 9px auto;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        border-radius: 5px;
+        left: 0;
+        background: #5F80D6;
+        width: inherit;
+        height: inherit;
+    }
+}

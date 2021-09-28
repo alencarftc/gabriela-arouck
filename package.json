@@ -39,7 +39,8 @@
     ]
   },
   "devDependencies": {
-    "react-app-rewired": "^2.1.8"
+    "react-app-rewired": "^2.1.8",
+    "react-router-hash-link": "^2.4.3"
   },
   "jest": {
     "moduleNameMapper": {

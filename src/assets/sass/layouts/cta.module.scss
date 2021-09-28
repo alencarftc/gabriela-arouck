@@ -16,6 +16,12 @@
     }
   }
 
+  @include mix.mq("xs", max){
+    p {
+      padding: 0 15px;
+    }
+  }
+
   h1 {
     color: default.$secondary-color;
   }

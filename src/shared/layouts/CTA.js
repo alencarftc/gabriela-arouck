@@ -7,8 +7,8 @@ const CTA = () => (
   <section className={`${style.cta} container`}>
     <div className="row">
       <div className="info col-md-7">
-        <h1>Olá, me chamo Gabriela, sou UX/UI designer.</h1>
-        <p>Mestre em Design, tenho interesses relacionados à pesquisas aplicadas a UX/UI, Design Centrado no Usuário, Design de Interação, Usabilidade.</p>
+        <h1 class="title">Olá, me chamo Gabriela, sou UX/UI designer.</h1>
+        <p class="paragraph">Mestre em Design, tenho interesses relacionados à pesquisas aplicadas a UX/UI, Design Centrado no Usuário, Design de Interação, Usabilidade.</p>
         <Button primary>Vamos conversar</Button>
       </div>
       <div className="offset-1 offset-md-0 col-10 col-md-5">

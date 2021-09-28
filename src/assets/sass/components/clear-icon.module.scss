@@ -1,0 +1,29 @@
+.root {
+    border-radius: 5px;
+    margin-left: auto;
+    position: relative;
+    height: 25px;
+    width: 25px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -2px;
+        background: #5F80D6;
+        height: 4px;
+        width: 30px;
+        display: inline-block;
+        transition: transform 150ms ease;
+        border-radius: 5px;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+}

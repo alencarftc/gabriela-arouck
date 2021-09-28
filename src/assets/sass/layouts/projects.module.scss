@@ -6,10 +6,8 @@
 
 .projects {
   text-align: center;
-}
 
-@include mix.mq("sm", min) {
-  .projects {
+  h3 {
     text-align: left;
   }
 }

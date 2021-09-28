@@ -1,5 +1,16 @@
 @use "@sass/abstracts/mixins" as mix;
 
+.row {
+  width: 100%;
+  align-items: center;
+}
+
+.iconCol {
+  float: right;
+  clear: both;
+  text-align: right;
+}
+
 .header {
   background: #ffffff;
   box-shadow: 0 5px 20px #c0e5fc58;
@@ -12,10 +23,20 @@
   & > div {
     @include mix.to-flex($justify: space-between, $align: center);
     min-height: 88px;
-    width: 100%;
 
-    div {
-      width: inherit;
+    @include mix.mq("sm", min){
+      width: 100%;
+  
+      div {
+        width: inherit;
+      }
+    }
+
+    > div,
+    > div > div {
+      min-height: inherit;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -24,6 +45,7 @@
     align-items: center;
     text-align: center;
     height: 100%;
+    width: 100%;
 
     li {
       font-size: 16rem;
@@ -39,6 +61,8 @@
       @include mix.mq("sm", max){
         color: #030164;
         padding: 11px 16px 12px;
+        text-align: left;
+        width: 100%;
       }
     }
   }

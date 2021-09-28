@@ -1,3 +1,5 @@
+@use "@sass/abstracts/mixins" as mix;
+
 .skills {
   background: #f3f3ff81;
 
@@ -9,6 +11,10 @@
       padding: 40px 0;
       max-width: 260px;
       margin: 0 auto;
+
+      @include mix.mq("xs", max) {
+        padding: 20px 0;
+      }
     }
 
     h3 {

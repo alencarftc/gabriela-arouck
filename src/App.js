@@ -9,17 +9,17 @@ import ReszonProjectPage from "@pages/projects/ReszonProjectPage";
 
 const App = () => (
   <div className={style.app}>
-    <Header />
     <BrowserRouter>
+      <Header />
       <Switch>
-        <Route path="/">
-          <HomePage />
+        <Route path="/projetos/reszon">
+          <ReszonProjectPage />
         </Route>
         <Route path="/projetos/gaguez">
           <GaguezProjectPage />
         </Route>
-        <Route path="/projetos/reszon">
-          <ReszonProjectPage />
+        <Route exact path="/">
+          <HomePage />
         </Route>
         <Route path="*">
           <p>Página não encontrada :(</p>

@@ -46,7 +46,7 @@ const Skills = () => {
       <div className={`${style.skillsInner} container`}>
         <div className="row">
           <div className="col-12">
-            <h3>SKILLS</h3>
+            <h3 className="subtitle">SKILLS</h3>
           </div>
         </div>
         <div className="row">

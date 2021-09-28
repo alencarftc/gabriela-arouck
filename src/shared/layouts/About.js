@@ -9,12 +9,12 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h3>SOBRE</h3>
+            <h3 className="subtitle">SOBRE</h3>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
-            <p>
+            <p className="paragraph">
               Mestre em Design pelo Programa de Pós-Graduação em Design -
               Mestrado Profissional pela Universidade Federal do Amazonas - UFAM
               (2019). Formada em Design pela Universidade Federal do Amazonas -

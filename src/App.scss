@@ -1,11 +1,32 @@
+@use "@sass/abstracts/mixins" as mix;
+
 html {
   scroll-behavior: smooth;
 }
 
 .navUp {
-  top: 0 !important;
+  top: 0;
 }
 
 .navDown {
   top: -88px !important;
 }
+
+@include mix.mq("xs", max){
+  *:not(header) > .container {
+    max-width: 340px;
+  }
+
+  h1.title {
+    font-size: 31rem;
+  }
+
+  h3.subtitle {
+    font-size: 20rem;
+  }
+  
+  p.paragraph {
+    font-size: 12rem;
+  }
+}
+

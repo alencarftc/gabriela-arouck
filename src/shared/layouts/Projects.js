@@ -12,6 +12,7 @@ const Projects = () => {
     gaguez: {
       theme: THEMES.theme1,
       title: "Gaguez",
+      path: '/projetos/gaguez',
       subtitle: "Grupo de Apoio ao Gago",
       description: "Desenvolvimento de aplicativo mobile para apoio Sócio-informacional à pessoas com gagueira.",
       mobileImage: MockupGaguezMob,
@@ -20,6 +21,7 @@ const Projects = () => {
     reszon: {
       theme: THEMES.theme2,
       title: "Reszon",
+      path: '/projetos/reszon',
       subtitle: "Landing Page",
       description: "Projeto de criação de Landing Page para a Startup Reszon - Marketing de Varejo Digital.",
       mobileImage: MockupReszonMob,
@@ -32,11 +34,12 @@ const Projects = () => {
     }
   }
 
-  const CustomProject = ({ project: { theme, children, description, title, subtitle, mobileImage } }) => (
+  const CustomProject = ({ project: { theme, children, description, title, subtitle, mobileImage, path } }) => (
     <Project
       description={description}
       theme={theme}
       title={title}
+      path={path}
       subtitle={subtitle}
       mobileImage={mobileImage}
     >
@@ -49,7 +52,7 @@ const Projects = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h3>PROJETOS</h3>
+            <h3 className="subtitle">PROJETOS</h3>
           </div>
         </div>
         <ul className="row">

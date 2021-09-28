@@ -1,3 +1,5 @@
+@use "@sass/abstracts/mixins" as mix;
+
 .about {
   button {
     margin-bottom: 120px;
@@ -7,5 +9,12 @@
     margin: 32.5px 0;
     font-weight: 300;
     line-height: 32px;
+
+    @include mix.mq("xs", max){
+      padding-right: 21px;
+      line-height: 16px;
+      font-size: 12rem;
+      margin: 20px 0;
+    }
   }
 }
