@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8396e0ac.chunk.css",
+    "main.js": "/static/js/main.adf43610.chunk.js",
+    "main.js.map": "/static/js/main.adf43610.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.59d73e32.js",
+    "runtime-main.js.map": "/static/js/runtime-main.59d73e32.js.map",
+    "static/js/2.ca3da64f.chunk.js": "/static/js/2.ca3da64f.chunk.js",
+    "static/js/2.ca3da64f.chunk.js.map": "/static/js/2.ca3da64f.chunk.js.map",
+    "static/js/3.16441117.chunk.js": "/static/js/3.16441117.chunk.js",
+    "static/js/3.16441117.chunk.js.map": "/static/js/3.16441117.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.8396e0ac.chunk.css.map": "/static/css/main.8396e0ac.chunk.css.map",
+    "static/js/2.ca3da64f.chunk.js.LICENSE.txt": "/static/js/2.ca3da64f.chunk.js.LICENSE.txt",
+    "static/media/behance.bcc433db.png": "/static/media/behance.bcc433db.png",
+    "static/media/chat-alt-2.76d005e8.svg": "/static/media/chat-alt-2.76d005e8.svg",
+    "static/media/chat.871870f3.svg": "/static/media/chat.871870f3.svg",
+    "static/media/curriculo_gabriela_arouck.5b83ddcf.pdf": "/static/media/curriculo_gabriela_arouck.5b83ddcf.pdf",
+    "static/media/divisor-reszon.78252bb8.png": "/static/media/divisor-reszon.78252bb8.png",
+    "static/media/dribble.796854a6.png": "/static/media/dribble.796854a6.png",
+    "static/media/exclamation.cbfafcf8.svg": "/static/media/exclamation.cbfafcf8.svg",
+    "static/media/gabi.ada04f2b.png": "/static/media/gabi.ada04f2b.png",
+    "static/media/light-bulb.4162d4c9.svg": "/static/media/light-bulb.4162d4c9.svg",
+    "static/media/light-bulb.60463f5b.svg": "/static/media/light-bulb.60463f5b.svg",
+    "static/media/linkedin.68ac41e1.png": "/static/media/linkedin.68ac41e1.png",
+    "static/media/mockup-gaguez-mobile.7cd6c027.png": "/static/media/mockup-gaguez-mobile.7cd6c027.png",
+    "static/media/mockup-gaguez.f32978f0.png": "/static/media/mockup-gaguez.f32978f0.png",
+    "static/media/mockup-reszon-mobile.1547dab5.png": "/static/media/mockup-reszon-mobile.1547dab5.png",
+    "static/media/mockup-reszon1.1588142d.png": "/static/media/mockup-reszon1.1588142d.png",
+    "static/media/pespective-reszon.a9f94310.png": "/static/media/pespective-reszon.a9f94310.png",
+    "static/media/reszon.a71c160f.png": "/static/media/reszon.a71c160f.png",
+    "static/media/search-circle.fed08741.svg": "/static/media/search-circle.fed08741.svg",
+    "static/media/target.5492cb86.svg": "/static/media/target.5492cb86.svg",
+    "static/media/user-circle.dea496ef.svg": "/static/media/user-circle.dea496ef.svg",
+    "static/media/user-group.e1ee03d2.svg": "/static/media/user-group.e1ee03d2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59d73e32.js",
+    "static/js/2.ca3da64f.chunk.js",
+    "static/css/main.8396e0ac.chunk.css",
+    "static/js/main.adf43610.chunk.js"
+  ]
+}
