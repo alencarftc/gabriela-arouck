@@ -6,9 +6,15 @@
 }
 
 .iconCol {
-  float: right;
-  clear: both;
   text-align: right;
+
+  div {
+    float: right;
+    clear: both;
+    width: 100%;
+    cursor: pointer;
+    max-width: 25px;
+  }
 }
 
 .header {
@@ -24,9 +30,9 @@
     @include mix.to-flex($justify: space-between, $align: center);
     min-height: 88px;
 
-    @include mix.mq("sm", min){
+    @include mix.mq("sm", min) {
       width: 100%;
-  
+
       div {
         width: inherit;
       }
@@ -58,7 +64,7 @@
         color: #72b7e2;
       }
 
-      @include mix.mq("sm", max){
+      @include mix.mq("sm", max) {
         color: #030164;
         padding: 11px 16px 12px;
         text-align: left;

@@ -1,45 +1,52 @@
-import React from 'react'
-import style from '@sass/layouts/skills.module.scss';
-import ChatIcon from "@images/layouts/skills/chat.svg"
-import ChatAltIcon from "@images/layouts/skills/chat-alt-2.svg"
-import LightBulbIcon from "@images/layouts/skills/light-bulb.svg"
-import SearchCircleIcon from "@images/layouts/skills/search-circle.svg"
-import UserCircleIcon from "@images/layouts/skills/user-circle.svg"
-import UserGroupIcon from "@images/layouts/skills/user-group.svg"
+import React from "react";
+import style from "@sass/layouts/skills.module.scss";
+import ChatIcon from "@images/layouts/skills/chat.svg";
+import ChatAltIcon from "@images/layouts/skills/chat-alt-2.svg";
+import LightBulbIcon from "@images/layouts/skills/light-bulb.svg";
+import SearchCircleIcon from "@images/layouts/skills/search-circle.svg";
+import UserCircleIcon from "@images/layouts/skills/user-circle.svg";
+import UserGroupIcon from "@images/layouts/skills/user-group.svg";
+import Skill from "@components/Skill";
 
 const Skills = () => {
   const skills = [
     {
       title: "CURIOSIDADE",
-      description: "Sempre buscando aprender coisas novas e assim trazer soluções para o projeto.",
-      icon: SearchCircleIcon
+      description:
+        "Sempre buscando aprender coisas novas e assim trazer soluções para o projeto.",
+      icon: SearchCircleIcon,
     },
     {
       title: "EMPATIA",
-      description: "Entendendo o ponto de vista da persona conseguimos atender as necessidades do usuário em um determinado contexto.",
-      icon: UserCircleIcon
+      description:
+        "Entendendo o ponto de vista da persona conseguimos atender as necessidades do usuário em um determinado contexto.",
+      icon: UserCircleIcon,
     },
     {
       title: "COMUNICAÇÃO",
-      description: "É necessário ter uma boa comunicação com a equipe e todas as partes interessadas no projeto.",
-      icon: ChatAltIcon
+      description:
+        "É necessário ter uma boa comunicação com a equipe e todas as partes interessadas no projeto.",
+      icon: ChatAltIcon,
     },
     {
       title: "SOLUÇÃO DE PROBLEMAS",
-      description: "Ter a capacidade de superar as dificuldades e resolver problemas.",
-      icon: LightBulbIcon
+      description:
+        "Ter a capacidade de superar as dificuldades e resolver problemas.",
+      icon: LightBulbIcon,
     },
     {
       title: "ARGUMENTAÇÃO",
-      description: "Argumentar de acordo com os fatos e resultados na busca de um melhor resultado para o usuário e para o negócio.",
-      icon: ChatIcon
+      description:
+        "Argumentar de acordo com os fatos e resultados na busca de um melhor resultado para o usuário e para o negócio.",
+      icon: ChatIcon,
     },
     {
       title: "TRABALHO EM EQUIPE",
-      description: "Ter uma boa relação interpessoal, saber trocar ideias e valorizar opiniões em prol de um resultado melhor.",
-      icon: UserGroupIcon
+      description:
+        "Ter uma boa relação interpessoal, saber trocar ideias e valorizar opiniões em prol de um resultado melhor.",
+      icon: UserGroupIcon,
     },
-  ]
+  ];
 
   return (
     <section className={style.skills}>
@@ -50,20 +57,19 @@ const Skills = () => {
           </div>
         </div>
         <div className="row">
-          {skills.map(skill => (
+          {skills.map((skill) => (
             <div key={skill.title} className="col-12 col-sm-6 col-md-4">
-              <div className={style.item}>
-                <img src={skill.icon} alt={skill.title} />
-                <h5>{skill.title}</h5>
-                <p>{skill.description}</p>
-              </div>
+              <Skill
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+              />
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
-
+export default Skills;

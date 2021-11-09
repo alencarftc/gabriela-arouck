@@ -1,0 +1,44 @@
+@use "@sass/abstracts/mixins" as mix;
+
+.root {
+  text-align: center;
+  padding: 40px 0;
+  max-width: 260px;
+  margin: 0 auto;
+
+  h5 {
+    margin: 16px auto 14px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16rem;
+    line-height: 22px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 68px;
+    max-height: 68px;
+  }
+
+  @include mix.mq("xs", max) {
+    padding: 20px 0;
+  }
+}
+
+.zoom {
+  max-width: 440px;
+
+  h5 {
+    font-size: 32rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 22rem;
+    font-weight: 300;
+    line-height: 32px;
+  }
+}

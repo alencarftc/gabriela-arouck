@@ -6,38 +6,9 @@
   .skillsInner {
     padding-bottom: 52px;
 
-    .item {
-      text-align: center;
-      padding: 40px 0;
-      max-width: 260px;
-      margin: 0 auto;
-
-      @include mix.mq("xs", max) {
-        padding: 20px 0;
-      }
-    }
-
     h3 {
       text-align: left;
       margin-bottom: 40px;
-    }
-
-    h5 {
-      margin: 16px auto 14px;
-      font-weight: 700;
-    }
-
-    p {
-      font-weight: 300;
-      font-size: 16rem;
-      line-height: 22px;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      max-width: 68px;
-      max-height: 68px;
     }
   }
 }

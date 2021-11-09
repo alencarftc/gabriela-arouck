@@ -1,40 +1,51 @@
-import React from 'react'
-import Project, { THEMES } from '@components/Project';
-import style from '@sass/layouts/projects.module.scss'
-import MockupGaguez from '@images/layouts/projects/mockup-gaguez.png';
-import MockupReszon1 from '@images/layouts/projects/mockup-reszon1.png';
-import MockupReszon2 from '@images/layouts/projects/mockup-reszon2.png';
-import MockupGaguezMob from '@images/layouts/projects/mockup-gaguez-mobile.png';
-import MockupReszonMob from '@images/layouts/projects/mockup-reszon-mobile.png';
+import React from "react";
+import Project, { THEMES } from "@components/Project";
+import style from "@sass/layouts/projects.module.scss";
+import MockupGaguez from "@images/layouts/projects/mockup-gaguez.png";
+import MockupGaguezMob from "@images/layouts/projects/mockup-gaguez-mobile.png";
+import MockupReszon1 from "@images/layouts/projects/mockup-reszon1.png";
+import MockupReszonMob from "@images/layouts/projects/mockup-reszon-mobile.png";
 
 const Projects = () => {
   const projects = {
     gaguez: {
       theme: THEMES.theme1,
       title: "Gaguez",
-      path: '/projetos/gaguez',
+      path: "#",
       subtitle: "Grupo de Apoio ao Gago",
-      description: "Desenvolvimento de aplicativo mobile para apoio Sócio-informacional à pessoas com gagueira.",
+      description:
+        "Desenvolvimento de aplicativo mobile para apoio Sócio-informacional à pessoas com gagueira.",
       mobileImage: MockupGaguezMob,
-      children: (<img src={MockupGaguez} alt="Imagens do aplicativo Gaguez" />),
+      children: <img src={MockupGaguez} alt="Imagens do aplicativo Gaguez" />,
     },
     reszon: {
       theme: THEMES.theme2,
       title: "Reszon",
-      path: '/projetos/reszon',
+      path: "#",
       subtitle: "Landing Page",
-      description: "Projeto de criação de Landing Page para a Startup Reszon - Marketing de Varejo Digital.",
+      description:
+        "Projeto de criação de Landing Page para a Startup Reszon - Marketing de Varejo Digital.",
       mobileImage: MockupReszonMob,
       children: (
         // <div className={style.row}>
-          <img src={MockupReszon1} alt="Parte 1 da landing page do Reszon" />
-          // <img src={MockupReszon2} alt="Parte 2 da landing page do Reszon" />
+        <img src={MockupReszon1} alt="Parte 1 da landing page do Reszon" />
+        // <img src={MockupReszon2} alt="Parte 2 da landing page do Reszon" />
         // </div>
-      )
-    }
-  }
+      ),
+    },
+  };
 
-  const CustomProject = ({ project: { theme, children, description, title, subtitle, mobileImage, path } }) => (
+  const CustomProject = ({
+    project: {
+      theme,
+      children,
+      description,
+      title,
+      subtitle,
+      mobileImage,
+      path,
+    },
+  }) => (
     <Project
       description={description}
       theme={theme}
@@ -45,7 +56,7 @@ const Projects = () => {
     >
       {children}
     </Project>
-  )
+  );
 
   return (
     <section id="projects-section" className={style.projects}>
@@ -65,7 +76,7 @@ const Projects = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -2,7 +2,8 @@
 @use "@sass/abstracts/mixins" as mix;
 
 .blue {
-  h1 {
+  h1,
+  h2 {
     color: default.$secondary-color;
   }
   p {
@@ -12,13 +13,51 @@
 
 .green {
   h1,
+  h2,
   p {
     color: #6aad85;
   }
 }
 
-.cta {
+.projectCTA {
+  text-align: center;
   padding: calc(5.5% + 103px) 0 48.5px;
+
+  h1,
+  h2 {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 72rem;
+    font-weight: 700;
+    line-height: 72rem;
+  }
+  h2 {
+    font-size: 39rem;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  img {
+    max-height: 660px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .info {
+    max-width: 610px;
+  }
 
   @include mix.mq("sm", max) {
     text-align: center;
@@ -36,17 +75,5 @@
     p {
       padding: 0 15px;
     }
-  }
-
-  h1 {
-    color: default.$secondary-color;
-  }
-
-  p {
-    margin-bottom: 16px;
-  }
-
-  .info {
-    max-width: 610px;
   }
 }

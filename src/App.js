@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "@sass/main.scss";
 
 import style from "./App.scss";
